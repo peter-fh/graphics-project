@@ -2,15 +2,14 @@
 #define SIZE 10
 
 int *createArray(int n) {
-  int *arr = (int *)malloc(n * sizeof(int));
+  int *arr = new int[n];
   return arr;
 }
 
-int *initializeArray(int *arr, int n) {
+void initializeArray(int *arr, int n) {
   for (int i = 0; i < n; i++) {
     arr[i] = i;
   }
-  return arr;
 }
 
 void printArray(int *arr, int n) {
@@ -19,7 +18,9 @@ void printArray(int *arr, int n) {
   }
 }
 
-void deleteArray(int *arr) { free(arr); }
+void deleteArray(int *arr) { 
+  delete arr;
+}
 
 int main() {
   int *arr = createArray(SIZE);
@@ -27,5 +28,5 @@ int main() {
   printArray(arr, SIZE);
   deleteArray(arr);
   std::cout << "\n";
-  printArray(arr, SIZE);//garbage values
+  printArray(arr, SIZE); // garbage values
 }
