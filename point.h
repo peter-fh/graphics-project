@@ -7,13 +7,20 @@ class Point {
 public:
     Point(int x, int y, int z);
     ~Point();
+
+    int getX();
+    int getY();
+    int getZ();
+
     int translate(int d, char axis);
-    friend float distance(Point* a, Point* b);
     float magnitude();
+
+    friend float distance(Point* a, Point* b);
     friend Point crossProduct(Point& a, Point& b);
 
     Point operator-(Point& a);
     friend std::ostream& operator<<(std::ostream&, Point&);
+    friend std::istream& operator>>(std::istream&, Point&);
     
 private:
     int* x;

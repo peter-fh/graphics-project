@@ -78,3 +78,22 @@ std::ostream& operator<<(std::ostream& o, Point& p){
     o << "(" << *p.x << ", " << *p.y << ", " << *p.z << ")";
     return o;
 }
+
+int Point::getX(){
+    return *this->x;
+}
+int Point::getY(){
+    return *this->y;
+}
+int Point::getZ(){
+    return *this->z;
+}
+
+std::istream& operator>>(std::istream& i, Point& p){
+    int x, y, z;
+    i >> x >> y >> z;
+    *p.x = x;
+    *p.y = y;
+    *p.z = z;
+    return i;
+}
