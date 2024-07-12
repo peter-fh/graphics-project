@@ -35,10 +35,7 @@ int Triangle::translate(int d, char axis){
 float Triangle::calcArea(){
     Point u = *vertex_2 - *vertex_1;
     Point v = *vertex_3 - *vertex_1;
-    std::cout << "u: " << u << "\n";
-    std::cout << "v: " << v << "\n";
     Point cross_product = crossProduct(u, v);
-    std::cout << "u x v: " << cross_product << "\n";
     return cross_product.magnitude() * 0.5;
 }
 
