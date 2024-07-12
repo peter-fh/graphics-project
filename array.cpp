@@ -23,10 +23,12 @@ void deleteArray(int *arr) {
 }
 
 int main() {
-  int *arr = createArray(SIZE);
-  initializeArray(arr, SIZE);
-  printArray(arr, SIZE);
+  int size;
+  std::cin >> size;
+  int *arr = createArray(size);
+  initializeArray(arr, size);
+  printArray(arr, size);
   deleteArray(arr);
   std::cout << "\n";
-  printArray(arr, SIZE); // garbage values
+  //printArray(arr, size); // garbage values
 }
