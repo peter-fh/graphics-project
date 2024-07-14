@@ -1,8 +1,6 @@
 #include "triangle.h"
 #include <iostream>
 
-// TODO: put this in a loop
-
 const std::string menu(
   "\n\n"
   "1. Display triangle information\n"

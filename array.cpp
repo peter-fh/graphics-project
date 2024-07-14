@@ -1,5 +1,5 @@
 #include <iostream>
-#define SIZE 10
+
 
 int *createArray(int n) {
   int *arr = new int[n];
@@ -16,6 +16,7 @@ void printArray(int *arr, int n) {
   for (int i = 0; i < n; i++) {
     std::cout << arr[i] << " ";
   }
+  std::cout << "\n";
 }
 
 void deleteArray(int *arr) { 
@@ -24,11 +25,10 @@ void deleteArray(int *arr) {
 
 int main() {
   int size;
+  std::cout << "Size: ";
   std::cin >> size;
   int *arr = createArray(size);
   initializeArray(arr, size);
   printArray(arr, size);
   deleteArray(arr);
-  std::cout << "\n";
-  //printArray(arr, size); // garbage values
 }
