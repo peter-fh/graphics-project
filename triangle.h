@@ -10,7 +10,7 @@ class Triangle {
 
 public:
     Triangle();
-    Triangle(Point& p1, Point& p2, Point& p3);
+    Triangle(const Point& p1, const Point& p2, const Point& p3);
     ~Triangle();
 
     int translate(int d, char axis);

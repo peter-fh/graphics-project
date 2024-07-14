@@ -1,13 +1,15 @@
 #include "triangle.h"
 #include <iostream>
 
+// TODO: Null checks
+
 Triangle::Triangle(){
     vertex_1 = nullptr;
     vertex_2 = nullptr;
     vertex_3 = nullptr;
 }
 
-Triangle::Triangle(Point& p1, Point& p2, Point& p3){
+Triangle::Triangle(const Point& p1, const Point& p2, const Point& p3){
     vertex_1 = new Point(p1);
     vertex_2 = new Point(p2);
     vertex_3 = new Point(p3);

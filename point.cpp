@@ -2,12 +2,19 @@
 #include <math.h>
 #include <iostream>
 
+// TODO: Null checks and default constructor?
+
 Point::Point(int x, int y, int z){
     this->x = new int(x);
     this->y = new int(y);
     this->z = new int(z);
 }
 
+Point::Point(const Point& p){
+    this->x = new int(*p.x);
+    this->y = new int(*p.y);
+    this->z = new int(*p.z);
+}
 
 Point::~Point(){
     delete x;
@@ -23,14 +30,16 @@ int Point::translate(int d, char axis){
     switch (axis){
 	case 'x':
 	    *this->x += d;
-
+	    break;
 	case 'y':
 	    *this->y += d;
+	    break;
 	case 'z':
 	    *this->z += d;
+	    break;
 	default:
 	    return -1;
-	break;
+	    break;
     }
 
     return 0;
