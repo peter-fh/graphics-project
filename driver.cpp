@@ -4,8 +4,8 @@
 const std::string menu(
   "\n\n"
   "1. Display triangle information\n"
-  "2. Render triangle verteces in 2d\n"
-  "3. Translage triangle\n"
+  "2. Render triangle vertices in 2d\n"
+  "3. Translate triangle\n"
   "4. Exit\n"
   "#: "
 );
